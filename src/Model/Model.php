@@ -1,5 +1,5 @@
 <?php
- class Model
+class Model
 {
     protected $dsn = 'mysql:dbname=kyodokoiku;host=mysql';
     protected $user = 'root';
@@ -7,7 +7,8 @@
 
     protected $pdo;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->pdo = new PDO($this->dsn, $this->user, $this->password);
     }
- }
+}
