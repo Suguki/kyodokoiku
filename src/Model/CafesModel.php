@@ -1,6 +1,6 @@
 <?php
 
-class CafesModel
+class CafesModel extends Model
 {
     private $dsn = 'mysql:dbname=kyodokoiku;host=mysql';
     private $user = 'root';

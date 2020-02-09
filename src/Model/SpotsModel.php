@@ -1,6 +1,6 @@
 <?php
 
-class SpotsModel
+class SpotsModel extends Model
 {
     private $dsn = 'mysql:dbname=kyodokoiku;host=mysql';
     private $user = 'root';
