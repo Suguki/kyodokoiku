@@ -10,6 +10,10 @@ $feature = $_POST["feature"];
 try {
     $model = new CafesModel();
     $result = $model->select($prefecture, $purpose, $atomosphere, $feature);
+    $errMsg = '';
+    if(count($result) === 0) {
+        $errMsg = '存在しません';
+    }
 } catch (PDOException $e) {
     die('接続エラー：' .$e->getMessage());
 }

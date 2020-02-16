@@ -43,6 +43,12 @@
             <input type="submit" value="検索" class="btn btn-primary">
             </div>
         </form>
+        <?php if (isset($errMsg)) { ?>
+            <?php if (strlen($errMsg) > 0) { ?>
+                <div class="card"><?php echo $errMsg; ?></div>
+            <?php } ?>
+        <?php } ?>
+
         <?php
             if (isset($result)) {
                 foreach ($result as $index => $data) {

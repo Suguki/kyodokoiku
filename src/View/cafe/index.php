@@ -48,13 +48,16 @@
             <input type="submit" value="検索" class="btn btn-primary">
             </div>
         </form>
+        <?php if(isset($errMsg)) { ?>
+            <?php if(strlen($errMsg) > 0) { ?>
+                <div class="card"><?php echo $errMsg; ?></div>
+            <?php } ?>
+        <?php } ?>
         <?php
             if (isset($result)) {
                 foreach ($result as $index => $data) {
                     echo '今日は'.$data['place'].'に行こうかな<br><br>';
                 }
-            }else{
-                echo '開拓中です！ごめんね！<br><br>'; //ここどうしよう
             }
         ?>
         <a class="" href="../top/">戻る</a>
