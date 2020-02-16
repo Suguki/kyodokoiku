@@ -13,7 +13,7 @@
     </head>
     <body>
         <h2>今日どこ行く？</h2>
-        <form action="../../sightseeing/search.php" method="post">
+        <form action="../../spots/search.php" method="post">
             <div class="card m-1">
                 <div class="card card-body">
                     <div class="card card-text">

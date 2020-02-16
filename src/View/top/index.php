@@ -32,11 +32,11 @@
                 </div>
                 <div class="col-sm">
                     <div class="card m-1" style="width: 18rem;">
-                        <img src="../../images/sightseeing.jpeg" class="card-img-top" alt="KANKO">
+                        <img src="../../images/spots.jpeg" class="card-img-top" alt="KANKO">
                         <div class="card-body">
                             <h5 class="card-title">観光</h5>
-                            <p class="card-text">散歩行っちゃう？？？</p>
-                            <a href="/sightseeing" class="btn btn-primary">検索</a>
+                            <p class="card-text"></p>観光行っちゃう？？？</p>
+                            <a href="/spots" class="btn btn-primary">検索</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                         <img src="../../images/cafe.jpg" class="card-img-top" alt="COFFEE">
                         <div class="card-body">
                             <h5 class="card-title">カフェ</h5>
-                            <p class="card-text">どこへ茶しばく？</p>
+                            <p class="card-text">どこで茶しばく？</p>
                             <a href="/cafe" class="btn btn-primary">検索</a>
                         </div>
                     </div>
