@@ -1,5 +1,5 @@
 <?php
-require_once '../Model/Kyodoiku/connectToSql.php';
+require_once '../Model/SpotsModel.php';
 
 
 

@@ -1,7 +1,6 @@
 <?php
-require_once('../Model/Kyodoiku/connectToSql.php');
+require_once('../Model/CafesModel.php');
 
-$table = 'kyodokoiku_cafe';
 $prefecture = $_POST["prefecture"];
 $purpose = $_POST["purpose"];
 $atomosphere = $_POST["atomosphere"];
@@ -9,8 +8,8 @@ $feature = $_POST["feature"];
 
 
 try {
-    $db = new DB();
-    $result = $db->selectKyodokoiku_cafe($table, $prefecture, $purpose, $atomosphere, $feature);
+    $model = new CafesModel();
+    $result = $model->select($prefecture, $purpose, $atomosphere, $feature);
 } catch (PDOException $e) {
     die('接続エラー：' .$e->getMessage());
 }

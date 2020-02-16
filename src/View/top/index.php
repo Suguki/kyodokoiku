@@ -22,9 +22,9 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="card m-1" style="width: 18rem;">
-                        <img src="<?php echo $food->image?>" class="card-img-top" alt="GOHAN">
+                        <img src="../../images/food.jpg" class="card-img-top" alt="GOHAN">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $food->name?></h5>
+                            <h5 class="card-title">ご飯</h5>
                             <p class="card-text">何食べたいねん</p>
                             <a href="/food" class="btn btn-primary">検索</a>
                         </div>
@@ -32,9 +32,9 @@
                 </div>
                 <div class="col-sm">
                     <div class="card m-1" style="width: 18rem;">
-                        <img src="<?php echo $sightseeing->image?>" class="card-img-top" alt="KANKO">
+                        <img src="../../images/sightseeing.jpeg" class="card-img-top" alt="KANKO">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $sightseeing->name?></h5>
+                            <h5 class="card-title">観光</h5>
                             <p class="card-text">散歩行っちゃう？？？</p>
                             <a href="/sightseeing" class="btn btn-primary">検索</a>
                         </div>
@@ -42,9 +42,9 @@
                 </div>
                 <div class="col-sm">
                     <div class="card m-1" style="width: 18rem;">
-                        <img src="<?php echo $cafe->image?>" class="card-img-top" alt="COFFEE">
+                        <img src="../../images/cafe.jpg" class="card-img-top" alt="COFFEE">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $cafe->name?></h5>
+                            <h5 class="card-title">カフェ</h5>
                             <p class="card-text">どこへ茶しばく？</p>
                             <a href="/cafe" class="btn btn-primary">検索</a>
                         </div>

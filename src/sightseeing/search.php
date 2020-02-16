@@ -1,13 +1,12 @@
 <?php
-require_once('../Model/Kyodoiku/connectToSql.php');
-$table = 'kyodokoiku_sightseeing';
+require_once('../Model/SpotsModel.php');
 $howFar = $_POST["howFar"];
 $feeling = $_POST["feeling"];
 $cost = $_POST["cost"];
 
 try {
-    $db = new DB();
-    $result = $db->selectKyodokoiku_sightseeing($table, $howFar, $feeling, $cost);
+    $model = new SpotsModel();
+    $result = $model->select($howFar, $feeling, $cost);
 } catch (PDOException $e) {
     die('接続エラー：' .$e->getMessage());
 }
