@@ -2,7 +2,7 @@
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
+    background: red;/*ボタン色*/
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
@@ -14,22 +14,29 @@
     border-bottom: none;/*線を消す*/
   }
 
-
-/* h1 {
+  ul, ol {
+    padding: 0;
     position: relative;
-    padding: 0.6em;
-    background: -webkit-repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px,#ffe4b1 3px, #ffe4b1 8px);
-    background: repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px,#ffe4b1 3px, #ffe4b1 8px);
-    border-radius: 7px;
   }
-  
-  h1:after {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 30px;
-    border: 15px solid transparent;
-    border-top: 15px solid #ffebbe;
-    width: 0;
-    height: 0;
-  } :/
+
+  ul li, ol li {
+    color: #2d8fdd;
+    border-left: solid 6px #2d8fdd;/*左側の線*/
+    background: #f1f8ff;/*背景色*/
+    margin-bottom: 3px;/*下のバーとの余白*/
+     line-height: 1.5;
+    padding: 0.5em;
+    list-style-type: none!important;/*ポチ消す*/
+  }
+
+  .aaa {
+    color: #2d8fdd;
+    font-size : 50px
+  }
+
+  .cp_bgpattern12 {
+    background-color: transparent;
+    background-image:
+     radial-gradient(#F48FB1 3px, transparent 3px);
+    background-size: 30px 30px;
+  }

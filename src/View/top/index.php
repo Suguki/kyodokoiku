@@ -1,14 +1,9 @@
-<?php
- //include 'src/index.php';
-// ここは表示処理のみをするので何も書かない。書くのはsrc/index.php
-?>
-
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
         <meta charaset = "UTF-8">
         <title>今日どこいく？</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -17,7 +12,8 @@
 
     </head>
     <body>
-        <h2>今日どこ行く？</h2>
+    <div class="cp_bgpattern12">
+        <h2 class="aaa">今日どこ行く？</h2>
         <div class="container">
             <div class="row">
                 <div class="col-sm">
@@ -52,5 +48,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </body>
 </html>

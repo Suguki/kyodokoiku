@@ -10,7 +10,7 @@
 
         </head>
         <body>
-                    <h1>今日どこ行く？</h1>
+        <h1>今日どこ行く？</h1>
 
         <form action="/store.php" method="post">
             <div class="input-container m1">
