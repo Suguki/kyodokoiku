@@ -18,5 +18,3 @@ try {
     die('接続エラー：' .$e->getMessage());
 }
 include('../View/cafe/index.php');
-
-//結果を表示したあと、質問が初期設定に戻ってややこしい

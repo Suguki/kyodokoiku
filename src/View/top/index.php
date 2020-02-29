@@ -48,6 +48,7 @@
                 </div>
             </div>
         </div>
+        <a class="" href="/signUp">イケてるスポットを教えてくれ！</a>
     </div>
     </body>
 </html>
