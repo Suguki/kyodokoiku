@@ -6,7 +6,7 @@
  </head>
  <body>
    <h1>イケてるスポットを教えてくれ！</h1>
-   <form  action="/../../signUp/logIn.php" method="post">
+   <form  action="/../../logIn/logIn.php" method="post">
      <label for="email">email</label>
      <input type="email" name="email">
      <label for="password">password</label>
