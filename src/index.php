@@ -1,5 +1,4 @@
 <?php
- //include 'src/index.php';
 // ここは表示処理のみをするので何も書かない。書くのはsrc/index.php
 include 'Model/Model.php';
 

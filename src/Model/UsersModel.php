@@ -9,8 +9,14 @@ class UsersModel extends Model
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
-        $result =  $stmt->fetchAll();
+        $result = $stmt->fetchAll();
         return $result;
     }
-}
 
+    public function registerUsersInfo($email, $password)
+    {
+    $sql = "INSERT INTO `users`(email, password) VALUE('{$email}', '{$password}')";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    }
+}
