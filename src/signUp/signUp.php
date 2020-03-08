@@ -19,6 +19,12 @@ try {
     }
 
     $model = new UsersModel();
+
+    $user = $model->selectByEmail($email);
+    if (count($user) > 0) {
+        throw new Exception('このメールアドレスはすでに使用されています。');
+    }
+
     $result = $model->registerUsersInfo($email, $password);
     if ($result === false) {
         throw new Exception('登録に失敗しました。');
