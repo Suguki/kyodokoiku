@@ -14,7 +14,9 @@
         <?php if(isset($resultMessage)) { ?>
             <h1><?php echo $resultMessage?></h1>
         <?php }else {?>
-            <h1><?php echo $errorMessage?></h1>
+            <?php if(isset($errorMessage)) { ?>
+                <h1><?php echo $errorMessage?></h1>
+            <?php } ?>
         <?php } ?>
     </body>
 </html>

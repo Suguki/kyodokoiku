@@ -17,7 +17,8 @@ class UsersModel extends Model
     {
         $sql = "INSERT INTO `users`(email, password) VALUE(:email, :password)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue(':email', $email, ':password', $password);
-        $stmt->execute();
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':password', $password);
+        return $stmt->execute();
     }
 }
