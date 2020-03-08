@@ -3,7 +3,6 @@ require_once('../Model/UsersModel.php');
 session_start();
 
 $email = $_POST['email'];
-var_dump($email);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $resultMessage =  '出直してきな！';
     return false;

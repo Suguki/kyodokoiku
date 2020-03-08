@@ -15,8 +15,9 @@ class UsersModel extends Model
 
     public function registerUsersInfo($email, $password)
     {
-    $sql = "INSERT INTO `users`(email, password) VALUE('{$email}', '{$password}')";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->execute();
+        $sql = "INSERT INTO `users`(email, password) VALUE(:email, :password)";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':email', $email, ':password', $password);
+        $stmt->execute();
     }
 }
