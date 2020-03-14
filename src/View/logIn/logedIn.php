@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
-        <meta charaset = "UTF-8">
+        <meta charset = "UTF-8">
         <title>今日どこいく？</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -11,7 +11,15 @@
 
     </head>
     <body>
-    <h1><?php echo $resultMessage?></h1>
+        <?php if (isset($resultMessage)) { ?>
+                <h1><?php echo $resultMessage?></h1>
+                <?php include('../manager/index.php'); ?>
+            <?php } else {?>
+                <?php if (isset($errorMessage)) { ?>
+                    <h1><?php echo $errorMessage?></h1>
+                <?php } ?>
+            <?php } ?>
+            <a class="btn-square" href="../top/">戻る</a>
     </body>
 </html>
 
