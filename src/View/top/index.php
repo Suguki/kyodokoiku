@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
-        <meta charaset = "UTF-8">
+        <meta charset = "UTF-8">
         <title>今日どこいく？</title>
         <link rel="stylesheet" type="text/css" href="style.css">
 

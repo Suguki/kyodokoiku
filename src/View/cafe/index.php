@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
-        <meta charaset = "UTF-8">
+        <meta charset = "UTF-8">
         <title>今日どこいく？</title>
         <link rel="stylesheet" href="style.css">
 
@@ -20,22 +20,22 @@
                             <div class="option">どのエリア？</div>
                                 <select name="prefecture" >
                                     <option value="大阪"
-                                    <?php if(isset($prefecture)) { ?>
-                                       <?php if($prefecture == '大阪') { ?>
+                                    <?php if (isset($prefecture)) { ?>
+                                       <?php if ($prefecture == '大阪') { ?>
                                            selected
                                        <?php }?>
                                     <?php }?>
                                     >大阪</option>
                                     <option value="京都"
-                                    <?php if(isset($prefecture)) { ?>
-                                       <?php if($prefecture == '京都') { ?>
+                                    <?php if (isset($prefecture)) { ?>
+                                       <?php if ($prefecture == '京都') { ?>
                                            selected
                                        <?php }?>
                                      <?php }?>
                                     >京都</option>
                                     <option value="奈良"
-                                    <?php if(isset($prefecture)) { ?>
-                            　　　　　　　<?php if($prefecture == '奈良') { ?>
+                                    <?php if (isset($prefecture)) { ?>
+                            　　　　　　　<?php if ($prefecture == '奈良') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
@@ -44,39 +44,39 @@
                             <div calss="option">何系のカフェ？</div>
                                 <select name="purpose">
                                     <option value="おしゃべり"
-                                    <?php if(isset($purpose)) { ?>
-                            　　　　　　　<?php if($purpose == 'おしゃべり') { ?>
+                                    <?php if (isset($purpose)) { ?>
+                            　　　　　　　<?php if ($purpose == 'おしゃべり') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
                                     >おしゃべりしやすいところ</option>
                                     <option value="読書"
-                                    <?php if(isset($purpose)) { ?>
-                            　　　　　　　<?php if($purpose == '読書') { ?>
+                                    <?php if (isset($purpose)) { ?>
+                            　　　　　　　<?php if ($purpose == '読書') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
                                     >本が読める雰囲気のところ</option>
                                     <option value="勉強"
-                                    <?php if(isset($purpose)) { ?>
-                            　　　　　　　<?php if($purpose == '勉強') { ?>
+                                    <?php if (isset($purpose)) { ?>
+                            　　　　　　　<?php if ($purpose == '勉強') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
                                     >集中して作業ができるところ</option>
                                 </select>
                             <div class="option">どんな雰囲気が好み？</div>
-                                <select name="atomosphere">
+                                <select name="atmosphere">
                                     <option value="開放的"
-                                    <?php if(isset($atomosphere)) { ?>
-                            　　　　　　　<?php if($atomosphere == '開放的') { ?>
+                                    <?php if (isset($atmosphere)) { ?>
+                            　　　　　　　<?php if ($atmosphere == '開放的') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
                                     >店内が広くて開放的</option>
                                     <option value="ゆっくりできる"
-                                    <?php if(isset($atomosphere)) { ?>
-                            　　　　　　　<?php if($atomosphere == 'ゆっくりできる') { ?>
+                                    <?php if (isset($atmosphere)) { ?>
+                            　　　　　　　<?php if ($atmosphere == 'ゆっくりできる') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
@@ -85,29 +85,29 @@
                             <div class="option">こだわりとかある？</div>
                                 <select name="feature">
                                     <option value="眺め"
-                                    <?php if(isset($feature)) { ?>
-                            　　　　　　　<?php if($feature == '眺め') { ?>
+                                    <?php if (isset($feature)) { ?>
+                            　　　　　　　<?php if ($feature == '眺め') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
                                     >窓から良い景色が見える</option>
                                     <option value="本"
-                                    <?php if(isset($feature)) { ?>
-                            　　　　　　　<?php if($feature == '本') { ?>
+                                    <?php if (isset($feature)) { ?>
+                            　　　　　　　<?php if ($feature == '本') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
                                     >店主好みの本が置かれてたりする</option>
                                     <option value="音楽"
-                                    <?php if(isset($feature)) { ?>
-                            　　　　　　　<?php if($feature == '音楽') { ?>
+                                    <?php if (isset($feature)) { ?>
+                            　　　　　　　<?php if ($feature == '音楽') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
                                     >良い感じの音楽が流れている</option>
                                     <option value="食べ物"
-                                    <?php if(isset($feature)) { ?>
-                            　　　　　　　<?php if($feature == '食べ物') { ?>
+                                    <?php if (isset($feature)) { ?>
+                            　　　　　　　<?php if ($feature == '食べ物') { ?>
                             　　　　　　　    selected
                             　　　　　　　<?php }?>
                         　　　　　　　<?php }?>
@@ -120,8 +120,8 @@
             <input type="submit" value="検索" class="btn btn-primary">
             </div>
         </form>
-        <?php if(isset($errMsg)) { ?>
-            <?php if(strlen($errMsg) > 0) { ?>
+        <?php if (isset($errMsg)) { ?>
+            <?php if (strlen($errMsg) > 0) { ?>
                 <div class="card"><?php echo $errMsg; ?></div>
             <?php } ?>
         <?php } ?>

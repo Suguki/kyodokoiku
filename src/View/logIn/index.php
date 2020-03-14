@@ -11,7 +11,7 @@
      <input type="email" name="email">
      <label for="password">password</label>
      <input type="password" name="password">
-     <button type="submit">Sign In!</button>
+     <button type="submit">Log In!</button>
    </form>
    <h1>初めての方はこちら</h1>
    <form action="/../../signUp/signUp.php" method="post">

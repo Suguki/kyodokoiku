@@ -3,14 +3,14 @@ require_once __DIR__. '/Model.php';
 
 class CafesModel extends Model
 {
-    public function select($prefecture, $purpose, $atomosphere, $feature)
+    public function select($prefecture, $purpose, $atmosphere, $feature)
     {
         $sql = "SELECT
                   place
                 FROM `cafes`
                   WHERE `cafes`.`prefecture`='{$prefecture}'
                     AND `cafes`.`purpose`='{$purpose}'
-                    AND `cafes`.`atomosphere`='{$atomosphere}'
+                    AND `cafes`.`atmosphere`='{$atmosphere}'
                     AND `cafes`.`feature`='{$feature}'
 
         ";

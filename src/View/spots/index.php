@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
-        <meta charaset = "UTF-8">
+        <meta charset = "UTF-8">
         <title>今日どこいく？</title>
         <link rel="stylesheet" href="style.css">
 
@@ -20,22 +20,22 @@
                     <div class="option">遠くへ行きたい？近場がいい？</div>
                         <select name="howFar" >
                             <option value="近場"
-                            <?php if(isset($howFar)) { ?>
-                            <?php if($howFar == '近場') { ?>
+                            <?php if (isset($howFar)) { ?>
+                            <?php if ($howFar == '近場') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >近場</option>
                             <option value="遠く"
-                            <?php if(isset($howFar)) { ?>
-                            <?php if($howFar == '遠く') { ?>
+                            <?php if (isset($howFar)) { ?>
+                            <?php if ($howFar == '遠く') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >遠く</option>
                             <option value="めっちゃ遠く"
-                            <?php if(isset($howFar)) { ?>
-                            <?php if($howFar == 'めっちゃ遠く') { ?>
+                            <?php if (isset($howFar)) { ?>
+                            <?php if ($howFar == 'めっちゃ遠く') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
@@ -44,29 +44,29 @@
                     <div calss="option">気分は？</div>
                         <select name="feeling" >
                             <option value="浮世"
-                            <?php if(isset($feeling)) { ?>
-                            <?php if($feeling == '浮世') { ?>
+                            <?php if (isset($feeling)) { ?>
+                            <?php if ($feeling == '浮世') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >浮世を忘れたい</option>
                             <option value="おしゃれ"
-                            <?php if(isset($feeling)) { ?>
-                            <?php if($feeling == 'おしゃれ') { ?>
+                            <?php if (isset($feeling)) { ?>
+                            <?php if ($feeling == 'おしゃれ') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >おしゃれなところ行きたい</option>
                             <option value="自然"
-                            <?php if(isset($feeling)) { ?>
-                            <?php if($feeling == '自然') { ?>
+                            <?php if (isset($feeling)) { ?>
+                            <?php if ($feeling == '自然') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >自然に癒やされたい</option>
                             <option value="ショッピング"
-                            <?php if(isset($feeling)) { ?>
-                            <?php if($feeling == 'ショッピング') { ?>
+                            <?php if (isset($feeling)) { ?>
+                            <?php if ($feeling == 'ショッピング') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
@@ -75,22 +75,22 @@
                 <div class="option">予算はどれくらい?</div>
                         <select name="cost" >
                             <option value="1"
-                            <?php if(isset($cost)) { ?>
-                            <?php if($cost == '1') { ?>
+                            <?php if (isset($cost)) { ?>
+                            <?php if ($cost == '1') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >2000~5000</option></option>
                             <option value="2"
-                            <?php if(isset($cost)) { ?>
-                            <?php if($cost == '2') { ?>
+                            <?php if (isset($cost)) { ?>
+                            <?php if ($cost == '2') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >5000~7000</option>
                             <option value="3"
-                            <?php if(isset($cost)) { ?>
-                            <?php if($cost == '3') { ?>
+                            <?php if (isset($cost)) { ?>
+                            <?php if ($cost == '3') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
