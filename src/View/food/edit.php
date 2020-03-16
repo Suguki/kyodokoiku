@@ -1,10 +1,3 @@
-<?php
-require_once('../../Model/FoodsModel.php');
-
-$model = new FoodsModel();
-$results = $model->selectAll();
-
-?>
 <!DOCTYPE html>
 <html lang = "ja">
     <head>

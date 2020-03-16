@@ -1,10 +1,4 @@
-<?php
-require_once('../../Model/CafesModel.php');
 
-$model = new CafesModel();
-$results = $model->selectAll();
-
-?>
 <!DOCTYPE html>
 <html lang = "ja">
     <head>

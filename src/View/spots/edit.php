@@ -1,9 +1,3 @@
-<?php
-require_once('../../Model/SpotsModel.php');
-
-$model = new SpotsModel();
-$results = $model->selectAll();
-?>
 <!DOCTYPE html>
 <html lang = "ja">
     <head>

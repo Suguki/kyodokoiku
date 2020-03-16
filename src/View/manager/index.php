@@ -17,9 +17,9 @@
         </div>
         <div class="card-body">
             <p>コンテンツを編集</p>
-            <a class="btn btn-primary" href="../../View/food/update.php">ごはん</a>
-            <a class="btn btn-primary" href="../../View/cafe/update.php">カフェ</a>
-            <a class="btn btn-primary" href="../../View/spots/update.php">観光</a>
+            <a class="btn btn-primary" href="../../food/edit.php">ごはん</a>
+            <a class="btn btn-primary" href="../../cafe/edit.php">カフェ</a>
+            <a class="btn btn-primary" href="../../spots/edit.php">観光</a>
         </div>
         <div class="card-body">
             <p>コンテンツを削除</p>
