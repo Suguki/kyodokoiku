@@ -23,4 +23,4 @@ try {
     die;
 }
 
-include('../View/manager/food.php');
+include_once('../View/manager/food.php');

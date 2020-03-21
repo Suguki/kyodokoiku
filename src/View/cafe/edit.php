@@ -122,12 +122,17 @@
                         </form>
                      </div>
                 </form>
-                <div class="title">
-                        <form action="../../manager/editCafe.php" name="delete">
-                          <button type="submit">削除</button>
-                        </form>
-                </div>
             </div>
+
+            <form action="../../cafe/delete.php" method="post">
+                <button type="submit">削除</button>
+                     <div class="title">
+                        <form action="./edit.php" method="get">
+                            <input type="hidden" name="place" value="<?php echo $result['place'] ?>">
+                        </form>
+                    </div>
+            </form>
          <?php } ?>
+         <a class="" href="../manager/index.php">戻る</a>
     </body>
 

@@ -57,4 +57,13 @@ class SpotsModel extends Model
         $result = $stmt->execute();
         return $result;
     }
+
+    public function delete($place)
+    {
+        $sql = "DELETE FROM spots WHERE place = :place";
+        $stmt = $this ->pdo->prepare($sql);
+        $stmt->bindValue(':place', $place, PDO::PARAM_STR);
+        $result = $stmt->execute();
+        return $result;
+    }
 }
