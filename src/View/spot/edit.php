@@ -13,7 +13,7 @@
     <body>
         <?php foreach ($results as $result) { ?>
             <div class="input-container m1">
-                <form action="../../spots/update.php" method="post">
+                <form action="../../spot/update.php" method="post">
                     <p>遠くへ行きたい？近場がいい？</p>
                     <h3><?php echo $result['place']; ?></h3>
                     <?php echo $result['howFar']; ?>
@@ -96,11 +96,14 @@
                         </form>
                      </div>
                 </form>
-                <div class="title">
-                        <form action="../../manager/editCafe.php" name="delete">
-                          <button type="submit">削除</button>
-                        </form>
-                </div>
             </div>
+            <form action="../../spot/delete.php" method="post">
+                <button type="submit">削除</button>
+                     <div class="title">
+                        <form action="./edit.php" method="get">
+                            <input type="hidden" name="place" value="<?php echo $result['place'] ?>">
+                        </form>
+                    </div>
+            </form>
          <?php } ?>
     </body>

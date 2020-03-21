@@ -15,4 +15,4 @@ try {
     die('接続エラー：' .$e->getMessage());
 }
 
-include('../View/spots/index.php');
+include('../View/spot/index.php');
