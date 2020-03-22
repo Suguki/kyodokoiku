@@ -92,7 +92,7 @@
                     <button type="submit">更新!</button>
                      <div class="title">
                         <form action="./edit.php" method="get">
-                            <input type="hidden" name="place" value="<?php echo $result['place'] ?>">
+                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
                         </form>
                      </div>
                 </form>

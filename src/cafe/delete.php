@@ -1,11 +1,11 @@
 <?php
 require_once('../Model/CafesModel.php');
 
-$place = $_POST['place'];
+$id = $_POST['id'];
 
 try {
     $model = new CafesModel();
-    $result = $model->delete($place);
+    $result = $model->delete($id);
     if ($result === true) {
         $resultMessage = '削除完了';
     } else {
