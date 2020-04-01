@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
-        <meta charaset = "UTF-8">
-        <title>今日どこいく？</title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset = "UTF-8">
+        <title>今日どこいく？:food</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -11,9 +11,11 @@
 
     </head>
     <body>
+        <h1>どこ食べに行く？</h1>
         <form action="../../food/search.php" method="post">
-            <ul>
-                <li>遠くへ行きたい？近場がいい？</li>
+            <div class="card m-1">
+                <div class="card card-body">
+                    <div class="card card-text">
                     <select name="howFar" >
                         <option value="近場"
                         <?php if(isset($howFar)) { ?>
@@ -49,20 +51,20 @@
                     </select>
                 <li>予算はどれくらい？</li>
                     <select name="cost" >
-                        <option value="2000~5000" 
+                        <option value="2000~5000"
                         <?php if(isset($cost)) { ?>
                             <?php if($cost == '2000~5000') { ?>
                                 selected
                             <?php }?>
                         <?php }?>>2000~5000</option>
-                        <option value="5000~7000" 
+                        <option value="5000~7000"
                         <?php if(isset($cost)) { ?>
                             <?php if($cost == '5000~7000') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                         >5000~7000</option>
-                        <option value="7000~" 
+                        <option value="7000~"
                         <?php if(isset($cost)) { ?>
                             <?php if($cost == '7000~') { ?>
                                 selected
@@ -70,9 +72,8 @@
                         <?php }?>
                         > 7000~</option>
                     </select>
-            </ul>
             <div calss="m1" style="float: right">
-            <input type="submit" value="検索" class="btn btn-primary">
+                <input type="submit" value="検索" class="btn btn-primary">
             </div>
         </form>
         <?php if(isset($errMsg)){ ?>
@@ -87,6 +88,6 @@
                 }
             }
         ?>
-        <a class="btn-square" href="../top/">戻る</a>
+        <a class="btn btn-primary" href="../">戻る</a>
     </body>
 </html>
