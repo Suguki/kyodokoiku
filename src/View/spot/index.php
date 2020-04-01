@@ -12,8 +12,8 @@
 
     </head>
     <body>
-        <h2>今日どこ行く？</h2>
-        <form action="../../spot/search.php" method="post">
+        <h1>今日どこ行く？</h1>
+        <form action="../../spots/search.php" method="post">
             <div class="card m-1">
                 <div class="card card-body">
                     <div class="card card-text">
@@ -116,6 +116,6 @@
                 }
             }
         ?>
-        <a class="" href="../top/">戻る</a>
+        <a class="" href="../">戻る</a>
     </body>
 </html>
