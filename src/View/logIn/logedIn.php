@@ -12,14 +12,14 @@
     </head>
     <body>
         <?php if (isset($resultMessage)) { ?>
-                <h1><?php echo $resultMessage?></h1>
-                <?php include('../manager/index.php'); ?>
-            <?php } else {?>
-                <?php if (isset($errorMessage)) { ?>
-                    <h1><?php echo $errorMessage?></h1>
-                <?php } ?>
+            <h1><?php echo $resultMessage?></h1>
+            <?php include('../manager/index.php'); ?>
+        <?php } else {?>
+            <?php if (isset($errorMessage)) { ?>
+                <h1><?php echo $errorMessage?></h1>
             <?php } ?>
-            <a class="btn-square" href="../top/">戻る</a>
+        <?php } ?>
+        <a class="btn-square" href="../top/">戻る</a>
     </body>
 </html>
 

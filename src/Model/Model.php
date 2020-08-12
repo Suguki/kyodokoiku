@@ -1,7 +1,7 @@
 <?php
 class Model
 {
-    protected $dsn = 'mysql:dbname=gohan;host=mysql';
+    protected $dsn = 'mysql:dbname=kyodokoiku_DB;host=mysql';
     protected $user = 'root';
     protected $password = 'secret';
 

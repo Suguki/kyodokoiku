@@ -27,6 +27,5 @@
             <a class="btn btn-primary" href="../top/">カフェ</a>
             <a class="btn btn-primary" href="../top/">観光</a>
         </div>
-        <a class="btn-square" href="../top/">戻る</a>
     </body>
 </html>

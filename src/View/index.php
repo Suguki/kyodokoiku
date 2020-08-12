@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang = "ja">
-    <head>
-        <meta charset = "UTF-8">
-        <title>今日どこいく？</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+    <html lang = "ja">
+        <head>
+            <meta charset = "UTF-8">
+            <title>今日どこいく？</title>
+            <link rel="stylesheet" href="style.css">
+
+        </head>
+        <body>
         <h1>今日どこ行く？</h1>
         <form action="/store.php" method="post">
             <div class="input-container m1">

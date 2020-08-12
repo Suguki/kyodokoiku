@@ -13,7 +13,7 @@
     <body>
         <?php if (isset($resultMessage)) { ?>
             <h1><?php echo $resultMessage?></h1>
-            <?php include('../manager/') ?>
+            <?php include('../manager/index.php') ?>
         <?php } else {?>
             <?php if (isset($errorMessage)) { ?>
                 <h1><?php echo $errorMessage?></h1>

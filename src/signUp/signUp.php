@@ -3,9 +3,11 @@ require_once('../Model/UsersModel.php');
 
 $email = $_POST['email'];
 $password = $_POST['password'];
+$model = new UsersModel();
+
 try {
     if (empty($email) || empty($password)) {
-        throw new Exception('出直してきな!！');
+        throw new Exception('e-mail, passwordが未入力です!！');
     }
 
     if (!$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -17,8 +19,6 @@ try {
     } else {
         throw new Exception('パスワードは半角英数字をそれぞれ1文字以上含んだ8文字以上で設定してください。');
     }
-
-    $model = new UsersModel();
 
     $user = $model->selectByEmail($email);
     if (count($user) > 0) {
