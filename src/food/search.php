@@ -1,13 +1,13 @@
 <?php
 require_once('../Model/FoodsModel.php');
-$howFar = $_POST["howFar"];
+$distance = $_POST["distance"];
 $feeling = $_POST["feeling"];
 $cost = $_POST["cost"];
 
 
 try {
     $model = new FoodsModel();
-    $result = $model->select($howFar, $feeling, $cost);
+    $result = $model->select($distance, $feeling, $cost);
     $errMsg = '';
     if(count($result) === 0) {
         $errMsg = '存在しません';

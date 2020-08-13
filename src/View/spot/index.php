@@ -18,24 +18,24 @@
                 <div class="card card-body">
                     <div class="card card-text">
                     <div class="option">遠くへ行きたい？近場がいい？</div>
-                        <select name="howFar" >
+                        <select name="distance" >
                             <option value="近場"
-                            <?php if (isset($howFar)) { ?>
-                            <?php if ($howFar == '近場') { ?>
+                            <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '近場') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >近場</option>
                             <option value="遠く"
-                            <?php if (isset($howFar)) { ?>
-                            <?php if ($howFar == '遠く') { ?>
+                            <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '遠く') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                             >遠く</option>
                             <option value="めっちゃ遠く"
-                            <?php if (isset($howFar)) { ?>
-                            <?php if ($howFar == 'めっちゃ遠く') { ?>
+                            <?php if (isset($distance)) { ?>
+                            <?php if ($distance == 'めっちゃ遠く') { ?>
                                 selected
                             <?php }?>
                         <?php }?>

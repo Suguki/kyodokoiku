@@ -11,7 +11,7 @@
         <form action="/store.php" method="post">
             <div class="input-container m1">
                 <div class="h1">遠くへ行きたい？近場がいい？</div>
-                <select name="howFar" >
+                <select name="distance" >
                     <option value="近場">近場</option>
                     <option value="遠く">遠く</option>
                 </select>

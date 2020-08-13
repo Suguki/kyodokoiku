@@ -16,17 +16,17 @@
             <div class="card m-1">
                 <div class="card card-body">
                     <div class="card card-text">
-                    <select name="howFar" >
+                    <select name="distance" >
                         <option value="近場"
-                        <?php if(isset($howFar)) { ?>
-                            <?php if($howFar == '近場') { ?>
+                        <?php if(isset($distance)) { ?>
+                            <?php if($distance == '近場') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                         >近場</option>
                         <option value="遠く"
-                        <?php if(isset($howFar)) { ?>
-                            <?php if($howFar == '遠く') { ?>
+                        <?php if(isset($distance)) { ?>
+                            <?php if($distance == '遠く') { ?>
                                 selected
                             <?php }?>
                         <?php }?>

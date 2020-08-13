@@ -20,17 +20,17 @@
 
                         <div>
                             <label>近場？遠方？</label>
-                            <select name="howFar" class="form-control">
+                            <select name="distance" class="form-control">
                                 <option value="近場"
-                                    <?php if (isset($howFar)) { ?>
-                                        <?php if ($howFar == '近場') { ?>
+                                    <?php if (isset($distance)) { ?>
+                                        <?php if ($distance == '近場') { ?>
                                             selected
                                         <?php }?>
                                     <?php }?>
                                 >近場</option>
                                 <option value="遠く"
-                                    <?php if (isset($howFar)) { ?>
-                                        <?php if ($howFar == '遠く') { ?>
+                                    <?php if (isset($distance)) { ?>
+                                        <?php if ($distance == '遠く') { ?>
                                             selected
                                         <?php }?>
                                     <?php }?>
@@ -103,24 +103,24 @@
 
                             <div>
                                 <label>近場？遠い？</label>
-                                <select name="howFar" class="form-control">
+                                <select name="distance" class="form-control">
                                     <option value="近場"
-                                        <?php if (isset($howFar)) { ?>
-                                            <?php if ($howFar == '近場') { ?>
+                                        <?php if (isset($distance)) { ?>
+                                            <?php if ($distance == '近場') { ?>
                                                 selected
                                             <?php }?>
                                         <?php }?>
                                     >近場</option>
                                     <option value="遠く"
-                                        <?php if (isset($howFar)) { ?>
-                                            <?php if ($howFar == '遠く') { ?>
+                                        <?php if (isset($distance)) { ?>
+                                            <?php if ($distance == '遠く') { ?>
                                                 selected
                                             <?php }?>
                                         <?php }?>
                                     >遠く</option>
                                     <option value="めっちゃ遠く"
-                                        <?php if (isset($howFar)) { ?>
-                                            <?php if ($howFar == 'めっちゃ遠く') { ?>
+                                        <?php if (isset($distance)) { ?>
+                                            <?php if ($distance == 'めっちゃ遠く') { ?>
                                                 selected
                                             <?php }?>
                                         <?php }?>

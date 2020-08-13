@@ -11,23 +11,24 @@
 
     </head>
     <body>
+        <a href="../manager/index.php" class="btn btn-success position">戻る</a>
         <?php foreach ($results as $result) { ?>
             <div class="input-container m1">
                 <form action="../../spot/update.php" method="post">
                     <p>遠くへ行きたい？近場がいい？</p>
                     <h3><?php echo $result['place']; ?></h3>
-                    <?php echo $result['howFar']; ?>
-                    <select name="howFar" >
+                    <?php echo $result['distance']; ?>
+                    <select name="distance" >
                         <option value="近場"
-                        <?php if (isset($howFar)) { ?>
-                            <?php if ($howFar == '近場') { ?>
+                        <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '近場') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                         >近場</option>
                         <option value="遠く"
-                        <?php if (isset($howFar)) { ?>
-                            <?php if ($howFar == '遠く') { ?>
+                        <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '遠く') { ?>
                                 selected
                             <?php }?>
                         <?php }?>

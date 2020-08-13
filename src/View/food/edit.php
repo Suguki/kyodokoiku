@@ -16,18 +16,18 @@
                 <form action="../../food/update.php" method="post">
                     <h3><?php echo $result['place']; ?></h3>
                     <p>遠くへ行きたい？近場がいい？</p>
-                    <?php echo $result['howFar']; ?>
-                    <select name="howFar" >
+                    <?php echo $result['distance']; ?>
+                    <select name="distance" >
                         <option value="近場"
-                        <?php if (isset($howFar)) { ?>
-                            <?php if ($howFar == '近場') { ?>
+                        <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '近場') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
                         >近場</option>
                         <option value="遠く"
-                        <?php if (isset($howFar)) { ?>
-                            <?php if ($howFar == '遠く') { ?>
+                        <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '遠く') { ?>
                                 selected
                             <?php }?>
                         <?php }?>
