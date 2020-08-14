@@ -15,7 +15,7 @@
                 <div class="card">
                     <a href="../manager/index.php" class="btn btn-success position">戻る</a>
                     <form action="../../food/update.php" method="post">
-                        <h3><?php echo $result['place']; ?></h3>
+                        <input type="text" name="place" value="<?php echo $result['place']; ?>" placeholder="ごはん屋さんを記入してください" size="50">
                         <p>遠くへ行きたい？近場がいい？</p>
                         <?php echo $result['distance']; ?>
                         <select name="distance" >
@@ -35,7 +35,6 @@
                             >遠く</option>
                         </select>
                         <p>気分は？</p>
-                        <?php echo $result['feeling']; ?>
                         <select name="feeling" >
                             <option value="雰囲気を楽しみたい"
                             <?php if (isset($feeling)) { ?>
@@ -52,7 +51,6 @@
                             <?php }?>
                             >コスパ重視</option>
                         </select>
-                        <?php echo $result['cost']; ?>
                         <p>予算はどれくらい？</p>
                         <select name="cost" >
                             <option value="2000~5000"
@@ -77,15 +75,16 @@
                             > 7000~</option>
                         </select>
                         <button type="submit">更新!</button>
-                    </form>
-                    <div class="title">
-                        <form action="../../food/delete.php" name="delete" method="post">
-                            <button type="submit">削除</button>
-                            <form action="./" method="get">
-                                <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
-                            </form>
+                        <form action="./" method="get">
+                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
                         </form>
-                    </div>
+                    </form>
+                    <form action="../../food/delete.php" name="delete" method="post">
+                        <button type="submit">削除</button>
+                        <form action="./" method="get">
+                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
+                        </form>
+                    </form>
                 </div>
             </div>
          <?php } ?>

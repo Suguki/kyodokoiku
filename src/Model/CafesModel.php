@@ -50,15 +50,16 @@ class CafesModel extends Model
         return $stmt->execute();
     }
 
-    public function update($prefecture, $purpose, $atmosphere, $feature, $place)
+    public function update($prefecture, $purpose, $atmosphere, $feature, $place, $id)
     {
-        $sql = "UPDATE cafes SET prefecture = :prefecture, purpose = :purpose, atmosphere = :atmosphere, feature = :feature WHERE place = :place";
+        $sql = "UPDATE cafes SET prefecture = :prefecture, purpose = :purpose, atmosphere = :atmosphere, feature = :feature, place = :place WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':place', $place, PDO::PARAM_STR);
         $stmt->bindValue(':prefecture', $prefecture, PDO::PARAM_STR);
         $stmt->bindValue(':purpose', $purpose, PDO::PARAM_STR);
         $stmt->bindValue(':atmosphere', $atmosphere, PDO::PARAM_STR);
         $stmt->bindValue(':feature', $feature, PDO::PARAM_STR);
+        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
         $result = $stmt->execute();
         return $result;
     }

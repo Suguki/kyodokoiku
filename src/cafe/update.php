@@ -7,17 +7,25 @@ $prefecture = $_POST["prefecture"];
 $purpose = $_POST["purpose"];
 $atmosphere = $_POST["atmosphere"];
 $feature = $_POST["feature"];
+$id = $_POST['id'];
 
 try {
+    if(mb_strlen($place) === 0){
+        throw new Exception('未記入の項目があります。');
+    }
     $model = new CafesModel();
-    $result = $model->update($prefecture, $purpose, $atmosphere, $feature, $place);
+    $result = $model->update($prefecture, $purpose, $atmosphere, $feature, $place, $id);
 
     if ($result === true) {
         $resultMessage = '更新完了';
     } else {
-        $resultMessage = '更新エラーです';
+        throw new Exception('更新エラーです。');
     }
-} catch (PDOException $e) {
-    die('接続エラー：' .$e->getMessage());
+} catch (Exception $e) {
+    $errorMessage = $e->getMessage();
 }
-echo $resultMessage;
+
+include('../View/manager/food.php');
+
+
+

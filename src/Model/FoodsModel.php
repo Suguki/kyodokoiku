@@ -44,14 +44,15 @@ class FoodsModel extends Model
         return $stmt->execute();
     }
 
-    public function update($distance, $feeling, $cost, $place)
+    public function update($distance, $feeling, $cost, $place, $id)
     {
-        $sql = "UPDATE foods SET distance = :distance, feeling = :feeling, cost = :cost WHERE place = :place";
+        $sql = "UPDATE foods SET distance = :distance, feeling = :feeling, cost = :cost, place = :place WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':distance', $distance, PDO::PARAM_STR);
         $stmt->bindValue(':feeling', $feeling, PDO::PARAM_STR);
         $stmt->bindValue(':cost', $cost, PDO::PARAM_STR);
         $stmt->bindValue(':place', $place, PDO::PARAM_STR);
+        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
         $result = $stmt->execute();
         return $result;
     }

@@ -2,7 +2,6 @@
 require_once('../Model/SpotsModel.php');
 
 $id = $_POST['id'];
-var_dump($id);
 
 try {
     $model = new SpotsModel();

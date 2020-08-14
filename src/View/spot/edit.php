@@ -15,8 +15,8 @@
         <?php foreach ($results as $result) { ?>
             <div class="input-container m1">
                 <form action="../../spot/update.php" method="post">
+                    <input type="text" name="place" value="<?php echo $result['place']; ?>" placeholder="観光地を入力" size="50">
                     <p>遠くへ行きたい？近場がいい？</p>
-                    <h3><?php echo $result['place']; ?></h3>
                     <?php echo $result['distance']; ?>
                     <select name="distance" >
                         <option value="近場"
@@ -93,7 +93,7 @@
                     <button type="submit">更新!</button>
                      <div class="title">
                         <form action="./edit.php" method="get">
-                            <input type="hidden" name="place" value="<?php echo $result['place'] ?>">
+                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
                         </form>
                      </div>
                 </form>

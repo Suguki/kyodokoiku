@@ -13,127 +13,126 @@
     </head>
     <body>
         <?php foreach ($results as $result) { ?>
-            <div class="input-container m1">
-            <div class="card">
-                <a href="../manager/index.php" class="btn btn-success position">戻る</a>
-                <form action="../../cafe/update.php" method="post">
-                    <h3><?php echo $result['place']; ?></h3>
-                    <div class="option">どのエリア？</div>
-                        <select name="prefecture" >
-                            <option value="大阪"
-                            <?php if (isset($prefecture)) { ?>
-                               <?php if ($prefecture == '大阪') { ?>
-                                   selected
-                               <?php }?>
-                            <?php }?>
-                            >大阪</option>
-                            <option value="京都"
-                            <?php if (isset($prefecture)) { ?>
-                               <?php if ($prefecture == '京都') { ?>
-                                   selected
-                               <?php }?>
-                             <?php }?>
-                            >京都</option>
-                            <option value="奈良"
-                            <?php if (isset($prefecture)) { ?>
-                            　　　　　<?php if ($prefecture == '奈良') { ?>
-                            　　　　　    selected
+                <div class="input-container m1">
+                <div class="card">
+                    <a href="../manager/index.php" class="btn btn-success position">戻る</a>
+                    <form action="../../cafe/update.php" method="post">
+                        <input type="text" name="place" value="<?php echo $result['place']; ?>" placeholder="カフェ名を入力" size="50">
+                        <div class="option">どのエリア？</div>
+                            <select name="prefecture" >
+                                <option value="大阪"
+                                <?php if (isset($prefecture)) { ?>
+                                   <?php if ($prefecture == '大阪') { ?>
+                                       selected
+                                   <?php }?>
+                                <?php }?>
+                                >大阪</option>
+                                <option value="京都"
+                                <?php if (isset($prefecture)) { ?>
+                                   <?php if ($prefecture == '京都') { ?>
+                                       selected
+                                   <?php }?>
+                                 <?php }?>
+                                >京都</option>
+                                <option value="奈良"
+                                <?php if (isset($prefecture)) { ?>
+                                　　　　　<?php if ($prefecture == '奈良') { ?>
+                                　　　　　    selected
+                                　　　　　<?php }?>
                             　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >奈良</option>
-                        </select>
-                    <div calss="option">何系のカフェ？</div>
-                    <?php echo $result['purpose']; ?>
-                        <select name="purpose">
-                            <option value="おしゃべり"
-                            <?php if (isset($purpose)) { ?>
-                    　　　　　　　<?php if ($purpose == 'おしゃべり') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >おしゃべりしやすいところ</option>
-                            <option value="読書"
-                            <?php if (isset($purpose)) { ?>
-                    　　　　　　　<?php if ($purpose == '読書') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >本が読める雰囲気のところ</option>
-                            <option value="勉強"
-                            <?php if (isset($purpose)) { ?>
-                    　　　　　　　<?php if ($purpose == '勉強') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >集中して作業ができるところ</option>
-                        </select>
-                    <div class="option">どんな雰囲気が好み？</div>
-                    <?php echo $result['atmosphere']; ?>
-                        <select name="atmosphere">
-                            <option value="開放的"
-                            <?php if (isset($atmosphere)) { ?>
-                    　　　　　　　<?php if ($atmosphere == '開放的') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >店内が広くて開放的</option>
-                            <option value="ゆっくりできる"
-                            <?php if (isset($atmosphere)) { ?>
-                    　　　　　　　<?php if ($atmosphere == 'ゆっくりできる') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >ひと目を気にせずゆっくりできる</option>
-                        </select>
-                    <div class="option">こだわりとかある？</div>
-                    <?php echo $result['feature']; ?>
-                        <select name="feature">
-                            <option value="眺め"
-                            <?php if (isset($feature)) { ?>
-                    　　　　　　　<?php if ($feature == '眺め') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >窓から良い景色が見える</option>
-                            <option value="本"
-                            <?php if (isset($feature)) { ?>
-                    　　　　　　　<?php if ($feature == '本') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >店主好みの本が置かれてたりする</option>
-                            <option value="音楽"
-                            <?php if (isset($feature)) { ?>
-                    　　　　　　　<?php if ($feature == '音楽') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >良い感じの音楽が流れている</option>
-                            <option value="食べ物"
-                            <?php if (isset($feature)) { ?>
-                    　　　　　　　<?php if ($feature == '食べ物') { ?>
-                    　　　　　　　    selected
-                    　　　　　　　<?php }?>
-                        　　　　　<?php }?>
-                            >食べ物が美味しい</option>
-                        </select>
-                    <button type="submit">更新!</button>
-                     <div class="title">
-                        <form action="./edit.php" method="get">
-                            <input type="hidden" name="place" value="<?php echo $result['place'] ?>">
-                        </form>
-                     </div>
-                </form>
-                <div class="title">
-                    <form action="../../cafe/delete.php" name="delete" method="post">
-                        <button type="submit">削除</button>
-                        <form action="./" method="get">
-                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
-                        </form>
+                                >奈良</option>
+                            </select>
+                        <div calss="option">何系のカフェ？</div>
+                        <?php echo $result['purpose']; ?>
+                            <select name="purpose">
+                                <option value="おしゃべり"
+                                <?php if (isset($purpose)) { ?>
+                        　　　　　　　<?php if ($purpose == 'おしゃべり') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >おしゃべりしやすいところ</option>
+                                <option value="読書"
+                                <?php if (isset($purpose)) { ?>
+                        　　　　　　　<?php if ($purpose == '読書') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >本が読める雰囲気のところ</option>
+                                <option value="勉強"
+                                <?php if (isset($purpose)) { ?>
+                        　　　　　　　<?php if ($purpose == '勉強') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >集中して作業ができるところ</option>
+                            </select>
+                        <div class="option">どんな雰囲気が好み？</div>
+                        <?php echo $result['atmosphere']; ?>
+                            <select name="atmosphere">
+                                <option value="開放的"
+                                <?php if (isset($atmosphere)) { ?>
+                        　　　　　　　<?php if ($atmosphere == '開放的') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >店内が広くて開放的</option>
+                                <option value="ゆっくりできる"
+                                <?php if (isset($atmosphere)) { ?>
+                        　　　　　　　<?php if ($atmosphere == 'ゆっくりできる') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >ひと目を気にせずゆっくりできる</option>
+                            </select>
+                        <div class="option">こだわりとかある？</div>
+                        <?php echo $result['feature']; ?>
+                            <select name="feature">
+                                <option value="眺め"
+                                <?php if (isset($feature)) { ?>
+                        　　　　　　　<?php if ($feature == '眺め') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >窓から良い景色が見える</option>
+                                <option value="本"
+                                <?php if (isset($feature)) { ?>
+                        　　　　　　　<?php if ($feature == '本') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >店主好みの本が置かれてたりする</option>
+                                <option value="音楽"
+                                <?php if (isset($feature)) { ?>
+                        　　　　　　　<?php if ($feature == '音楽') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >良い感じの音楽が流れている</option>
+                                <option value="食べ物"
+                                <?php if (isset($feature)) { ?>
+                        　　　　　　　<?php if ($feature == '食べ物') { ?>
+                        　　　　　　　    selected
+                        　　　　　　　<?php }?>
+                            　　　　　<?php }?>
+                                >食べ物が美味しい</option>
+                            </select>
+                        <button type="submit">更新!</button>
+                         <div class="title">
+                            <form action="./" method="get">
+                                <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
+                            </form>
+                         </div>
                     </form>
+                    <div class="title">
+                        <form action="../../cafe/delete.php" name="delete" method="post">
+                            <button type="submit">削除</button>
+                            <form action="./" method="get">
+                                <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
+                            </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
- 
             </div>
          <?php } ?>
     </body>
