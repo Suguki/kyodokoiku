@@ -125,8 +125,11 @@
                      </div>
                 </form>
                 <div class="title">
-                    <form action="../../manager/editCafe.php" name="delete">
-                      <button type="submit">削除</button>
+                    <form action="../../cafe/delete.php" name="delete" method="post">
+                        <button type="submit">削除</button>
+                        <form action="./" method="get">
+                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
+                        </form>
                     </form>
                 </div>
             </div>

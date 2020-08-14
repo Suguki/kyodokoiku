@@ -62,4 +62,13 @@ class CafesModel extends Model
         $result = $stmt->execute();
         return $result;
     }
+
+    public function delete($id)
+    {
+        $sql = "DELETE FROM cafes WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+        $result = $stmt->execute();
+        return $result;
+    }
 }

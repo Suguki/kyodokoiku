@@ -98,13 +98,13 @@
                      </div>
                 </form>
             </div>
-            <form action="../../spot/delete.php" method="post">
-                <button type="submit">削除</button>
-                     <div class="title">
-                        <form action="./edit.php" method="get">
-                            <input type="hidden" name="place" value="<?php echo $result['place'] ?>">
-                        </form>
-                    </div>
-            </form>
+            <div class="title">
+                <form action="../../spot/delete.php" name="delete" method="post">
+                    <button type="submit">削除</button>
+                    <form action="./" method="get">
+                        <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
+                    </form>
+                </form>
+            </div>
          <?php } ?>
     </body>

@@ -60,7 +60,7 @@ class FoodsModel extends Model
     {
         $sql = "DELETE FROM foods WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
-        $stmt = bindValue(':id', $id, PDO::PARAM_STR);
+        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
         $result = $stmt->execute();
         return $result;
     }
