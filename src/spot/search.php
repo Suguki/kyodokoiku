@@ -7,12 +7,11 @@ $cost = $_POST["cost"];
 try {
     $model = new SpotsModel();
     $result = $model->select($distance, $feeling, $cost);
-    $errMsg = '';
     if(count($result) === 0) {
-        $errMsg =  '開拓中です';
+        throw new Exception('まだ登録がありません。');
     }
-} catch (PDOException $e) {
-    die('接続エラー：' .$e->getMessage());
+} catch (Exception $e) {
+    $errorMessage = $e->getMessage();
 }
 
 include('../View/spot/index.php');

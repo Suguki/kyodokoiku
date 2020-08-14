@@ -10,11 +10,10 @@ $feature = $_POST["feature"];
 try {
     $model = new CafesModel();
     $result = $model->select($prefecture, $purpose, $atmosphere, $feature);
-    $errMsg = '';
     if(count($result) === 0) {
-        $errMsg = '存在しません';
+        throw new Exception('まだ登録がありません');
     }
-} catch (PDOException $e) {
-    die('接続エラー：' .$e->getMessage());
+} catch (Exception $e) {
+    $errorMessage = $e->getMessage();
 }
 include('../View/cafe/index.php');
