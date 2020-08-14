@@ -30,4 +30,10 @@ h1{
   background-size: contain;
 }
 
+.position {
+  position: fixed;
+  bottom: 100px;
+  left: 450px;
+}
+
 
