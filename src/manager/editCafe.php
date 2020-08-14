@@ -9,19 +9,18 @@ $feature = $_POST['feature'];
 
 try {
     if (empty($place) || empty($prefecture) || empty($purpose) || empty($atmosphere) || empty($feature)) {
-        throw new Exception('出直してきな！！！！');
+        throw new Exception('未記入の項目があります。');
     }
     $model = new CafesModel();
     $cafes = $model->selectByPlace($place);
     if (count($cafes) > 0) {
-        throw new Exception('このカフェはすでに登録されています');
+        throw new Exception('このカフェはすでに登録されています。');
     }
     $result = $model->create($place, $prefecture, $purpose, $atmosphere, $feature);
-    $resultMessage = '更新完了';
+    //ここで$resultがtrueかどうか、バリデートする必要がある。
+    $resultMessage = '登録完了';
 } catch (Exception $e) {
     $errorMessage = $e->getMessage();
-    echo $errorMessage;
-    die;
 }
 
 include('../View/manager/cafe.php');

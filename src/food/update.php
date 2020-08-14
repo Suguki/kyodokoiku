@@ -9,11 +9,13 @@ try {
     $model = new FoodsModel();
     $result = $model->update($distance, $feeling, $cost, $place);
     if ($result === true) {
-        $resultMessage = '登録完了';
+        $resultMessage = '更新完了';
+        include('../manager/index.php');
+        return $resultMessage;
     } else {
         $resultMessage = '更新エラーです';
     }
 } catch (PDOException $e) {
     die('接続エラー：' .$e->getMessage());
 }
-echo $resultMessage;
+

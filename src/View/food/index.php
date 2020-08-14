@@ -76,6 +76,9 @@
                 <input type="submit" value="検索" class="btn btn-primary">
             </div>
         </form>
+        <div class="alert alert-success">
+            <?php echo $resultMessage; ?>
+        </div>
         <?php if(isset($errMsg)){ ?>
             <?php if(strlen($errMsg) > 0) { ?>
                 <div class="card"><?php echo $errMsg; ?></div>

@@ -8,19 +8,18 @@ $cost = $_POST['cost'];
 
 try {
     if (empty($place) || empty($distance) || empty($feeling) || empty($cost)) {
-        throw new Exception('出直してきな！！！！');
+        throw new Exception('未記入の項目があります。');
     }
     $model = new FoodsModel();
     $foods = $model->selectByPlace($place);
     if (count($foods) > 0) {
-        $errorMessage = 'このごはん屋さんはすでに登録されています。';
+        throw new Exception('このごはん屋さんはすでに登録されています。');
     }
     $result = $model->create($place, $distance, $feeling, $cost);
-    $resultMessage = '更新完了';
+        //ここで$resultがtrueかどうか、バリデートする必要がある。
+    $resultMessage = '登録完了';
 } catch (Exception $e) {
     $errorMessage = $e->getMessage();
-    echo $errorMessage;
-    die;
 }
 
 include('../View/manager/food.php');

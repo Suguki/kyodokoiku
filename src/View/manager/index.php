@@ -11,6 +11,11 @@
 
     </head>
     <body>
+    <?php if(isset($resultMessage)) { ?>
+        <div class="alert alert-success text-center">
+            <?php echo $resultMessage; ?>
+        </div>
+    <?php } ?>
         <div class="card-body">
             <p>コンテンツを追加</p>
             <a class="btn btn-primary" href="../../manager/signUpContents.php">追加</a>

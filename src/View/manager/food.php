@@ -11,13 +11,17 @@
 
     </head>
     <body>
-        <?php if(isset($resultMessage)) { ?>
-            <h1><?php echo $resultMessage?></h1>
-        <?php }else {?>
-            <?php if(isset($errorMessage)) { ?>
-                <h1><?php echo $errorMessage?></h1>
+        <?php if (isset($resultMessage)) { ?>
+            <div class="alert alert-success text-center">
+                <?php echo $resultMessage?>
+            </div>
+        <?php } else {?>
+            <?php if (isset($errorMessage)) { ?>
+                <div class="alert alert-danger text-center">
+                    <?php echo $errorMessage?>
+                </div>
             <?php } ?>
         <?php } ?>
-        <a class="btn-square" href="../top/">戻る</a>
+        <a href="../manager/index.php" class="btn btn-success position">戻る</a>
     </body>
 </html>
