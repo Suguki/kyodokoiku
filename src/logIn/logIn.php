@@ -27,7 +27,7 @@ try {
         $errorMessage = 'メールアドレス又はパスワードが間違っています。<br>半角になっているか、形式に沿っているかを確認してね。';
     }
     if (empty($email) || empty($password)) {
-        throw new Exception('出直してきな!！');
+        throw new Exception('未入力の項目があります!！');
     }
 } catch (Exception $e) {
     $errorMessage = $e->getMessage();
