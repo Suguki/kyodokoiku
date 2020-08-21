@@ -26,11 +26,5 @@
             <a class="btn btn-primary" href="../../cafe/edit.php">カフェ</a>
             <a class="btn btn-primary" href="../../spot/edit.php">観光</a>
         </div>
-        <div class="card-body">
-            <p>コンテンツを削除</p>
-            <a class="btn btn-primary" href="../top/">ごはん</a>
-            <a class="btn btn-primary" href="../top/">カフェ</a>
-            <a class="btn btn-primary" href="../top/">観光</a>
-        </div>
     </body>
 </html>
