@@ -9,10 +9,17 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
         <style>
+            body{
+                background-image: url('../../images/food.jpeg');
+                background-size: cover;
+            }
             .position-food { position: fixed; bottom: 100px; right: 27px;}
         </style>
     </head>
-    <body style="background-image: url('../../images/food.jpeg');">
+    <body>
+        <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
         <div class="transparent">
             <h1>どこ食べに行く？</h1>
             <form action="../../food/search.php" method="post">
