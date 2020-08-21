@@ -10,7 +10,7 @@ try {
         throw new Exception('削除処理に失敗しました。');
     }
     $resultMessage = '削除完了';
-} catch (PDOException $e) {
+} catch (Exception $e) {
     $errorMessage = $e->getMessage();
 }
 
