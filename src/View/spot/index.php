@@ -13,6 +13,9 @@
         </style>
     </head>
     <body style="background-image: url('../../images/spots.jpeg');">
+    <div id="header">
+        <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+    </div>
     <div class="transparent">
         <h1>今日どこ行く？</h1>
         <form action="../../spot/search.php" method="post">

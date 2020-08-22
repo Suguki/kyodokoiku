@@ -13,6 +13,9 @@
         </style>
     </head>
     <body style="background-image: url('../../images/coffee.jpg');">
+        <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
         <div class="transparent">
             <h1>気分に合うカフェを探す</h1>
             <form action="../../cafe/search.php" method="post">
