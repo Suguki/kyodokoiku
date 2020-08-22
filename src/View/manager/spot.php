@@ -11,6 +11,9 @@
 
     </head>
     <body>
+        <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
         <?php if (isset($resultMessage)) { ?>
             <div class="alert alert-success text-center">
                 <?php echo $resultMessage?>

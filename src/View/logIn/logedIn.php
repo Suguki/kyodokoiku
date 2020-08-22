@@ -11,6 +11,9 @@
 
     </head>
     <body>
+        <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
         <?php if (isset($resultMessage)) { ?>
             <?php include('../manager/index.php'); ?>
         <?php } else {?>
@@ -18,7 +21,7 @@
                 <h1><?php echo $errorMessage?></h1>
             <?php } ?>
         <?php } ?>
-        <a class="btn-square" href="../top/">戻る</a>
+        <a class="btn btn-primary" href="../top/">戻る</a>
     </body>
 </html>
 

@@ -11,6 +11,9 @@
 
     </head>
     <body>
+        <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
         <?php if (isset($resultMessage)) { ?>
             <h1><?php echo $resultMessage?></h1>
             <?php include('../manager/index.php') ?>

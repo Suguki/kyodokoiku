@@ -11,6 +11,9 @@
 
    </head>
    <body>
+      <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
       <div class="">
          <h1>イケてるスポットを教えてくれ！</h1>
           <form  action="/../../logIn/logIn.php" method="post">
