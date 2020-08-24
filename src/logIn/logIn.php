@@ -13,6 +13,7 @@ try {
         $resultMessage =  '出直してきな！';
         return false;
     }
+    $_SESSION = $_POST;
     $model = new UsersModel();
     $result = $model->selectByEmail($email);
     if (!isset($result[0]['email'])) {

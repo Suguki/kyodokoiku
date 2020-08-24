@@ -12,16 +12,20 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Sigh In</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                編集
-              </a>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/View/food/">ご飯</a>
-                <a class="dropdown-item" href="/View/spot/">観光</a>
-                <a class="dropdown-item" href="/View/cafe/">カフェ</a>
-            </li>
+            <?php if(isset($_SESSION)): ?>
+              <?php if(!empty($_SESSION)): ?>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  編集
+                </a>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/View/food/">ご飯</a>
+                  <a class="dropdown-item" href="/View/spot/">観光</a>
+                  <a class="dropdown-item" href="/View/cafe/">カフェ</a>
+              </li>
+              <?php endif; ?>
+            <?php endif; ?>
           </ul>
           <form action="" method="post" class="form-inline my-2 my-lg-0 text-right">
             <input class="form-control mr-sm-2" type="search" placeholder="検索" aria-label="Search">
