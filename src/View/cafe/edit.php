@@ -12,6 +12,9 @@
 
     </head>
     <body>
+        <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
         <?php foreach ($results as $result) { ?>
                 <div class="input-container m1">
                 <div class="card">

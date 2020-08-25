@@ -11,6 +11,9 @@
 
     </head>
     <body>
+        <div id="header">
+          <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
+        </div>
         <a href="../manager/index.php" class="btn btn-success position">戻る</a>
         <?php foreach ($results as $result) { ?>
             <div class="input-container m1">
