@@ -1,5 +1,6 @@
 <?php
 require_once('../Model/CafesModel.php');
+session_start();
 
 $model = new CafesModel();
 $results = $model->selectAll();

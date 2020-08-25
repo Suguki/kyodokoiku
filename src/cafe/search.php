@@ -1,5 +1,6 @@
 <?php
 require_once('../Model/CafesModel.php');
+session_start();
 
 $prefecture = $_POST["prefecture"];
 $purpose = $_POST["purpose"];
