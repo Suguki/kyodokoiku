@@ -13,9 +13,6 @@
         <div id="header">
           <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
         </div>
-        <span>
-            <a  class="edit" href="/logIn">コンテンツを編集</a>
-        </span>
         <h1>今日どこ行く？</h1>
         <div class="top-wrapper">
             <div class="container">
