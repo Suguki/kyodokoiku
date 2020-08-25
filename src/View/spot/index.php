@@ -120,7 +120,7 @@
         } ?>
     </div>
     <div class="position-spot">
-            <a class="btn btn-primary" href="..top/">戻る</a>
+            <a class="btn btn-primary" href="../../Top/top.php">戻る</a>
         </div>
     </body>
 </html>
