@@ -22,6 +22,6 @@
                 <h1><?php echo $errorMessage?></h1>
             <?php } ?>
         <?php } ?>
-        <a class="btn-square" href="../top/">戻る</a>
+        <a class="btn btn-success" href="../../Top/top.php">戻る</a>
     </body>
 </html>
