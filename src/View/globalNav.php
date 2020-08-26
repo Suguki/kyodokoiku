@@ -11,16 +11,16 @@
             </li>
             <?php if(isset($_SESSION)): ?>
               <?php if(!empty($_SESSION)): ?>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  編集
-                </a>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/food/edit.php">ご飯</a>
-                  <a class="dropdown-item" href="/spot/edit.php">観光</a>
-                  <a class="dropdown-item" href="/cafe/edit.php">カフェ</a>
-              </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    編集
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/food/edit.php">ご飯</a>
+                    <a class="dropdown-item" href="/spot/edit.php">観光</a>
+                    <a class="dropdown-item" href="/cafe/edit.php">カフェ</a>
+                  </div>
+                </li>
               <?php endif; ?>
             <?php endif; ?>
           </ul>

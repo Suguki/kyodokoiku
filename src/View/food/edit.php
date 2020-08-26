@@ -13,82 +13,80 @@
         <div id="header">
           <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
         </div>
+        <a href="../manager/index.php" class="btn btn-success position">戻る</a>
         <?php foreach ($results as $result) { ?>
             <div class="input-container m1">
-                <div class="card">
-                    <a href="../manager/index.php" class="btn btn-success position">戻る</a>
-                    <form action="../../food/update.php" method="post">
-                        <input type="text" name="place" value="<?php echo $result['place']; ?>" placeholder="ごはん屋さんを記入してください" size="50">
-                        <p>遠くへ行きたい？近場がいい？</p>
-                        <?php echo $result['distance']; ?>
-                        <select name="distance" >
-                            <option value="近場"
-                            <?php if (isset($distance)) { ?>
-                                <?php if ($distance == '近場') { ?>
-                                    selected
-                                <?php }?>
+                <form action="../../food/update.php" method="post">
+                    <input type="text" name="place" value="<?php echo $result['place']; ?>" placeholder="ごはん屋さんを記入してください" size="50">
+                    <p>遠くへ行きたい？近場がいい？</p>
+                    <?php echo $result['distance']; ?>
+                    <select name="distance" >
+                        <option value="近場"
+                        <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '近場') { ?>
+                                selected
                             <?php }?>
-                            >近場</option>
-                            <option value="遠く"
-                            <?php if (isset($distance)) { ?>
-                                <?php if ($distance == '遠く') { ?>
-                                    selected
-                                <?php }?>
+                        <?php }?>
+                        >近場</option>
+                        <option value="遠く"
+                        <?php if (isset($distance)) { ?>
+                            <?php if ($distance == '遠く') { ?>
+                                selected
                             <?php }?>
-                            >遠く</option>
-                        </select>
-                        <p>気分は？</p>
-                        <select name="feeling" >
-                            <option value="雰囲気を楽しみたい"
-                            <?php if (isset($feeling)) { ?>
-                                <?php if ($feeling == '雰囲気を楽しみたい') { ?>
-                                    selected
-                                <?php }?>
+                        <?php }?>
+                        >遠く</option>
+                    </select>
+                    <p>気分は？</p>
+                    <select name="feeling" >
+                        <option value="雰囲気を楽しみたい"
+                        <?php if (isset($feeling)) { ?>
+                            <?php if ($feeling == '雰囲気を楽しみたい') { ?>
+                                selected
                             <?php }?>
-                            >雰囲気を楽しみたい</option>
-                            <option value="コスパ重視"
-                            <?php if (isset($feeling)) { ?>
-                                <?php if ($feeling == 'コスパ重視') { ?>
-                                    selected
-                                <?php }?>
+                        <?php }?>
+                        >雰囲気を楽しみたい</option>
+                        <option value="コスパ重視"
+                        <?php if (isset($feeling)) { ?>
+                            <?php if ($feeling == 'コスパ重視') { ?>
+                                selected
                             <?php }?>
-                            >コスパ重視</option>
-                        </select>
-                        <p>予算はどれくらい？</p>
-                        <select name="cost" >
-                            <option value="2000~5000"
-                            <?php if (isset($cost)) { ?>
-                                <?php if ($cost == '2000~5000') { ?>
-                                    selected
-                                <?php }?>
-                            <?php }?>>2000~5000</option>
-                            <option value="5000~7000"
-                            <?php if (isset($cost)) { ?>
-                                <?php if ($cost == '5000~7000') { ?>
-                                    selected
-                                <?php }?>
+                        <?php }?>
+                        >コスパ重視</option>
+                    </select>
+                    <p>予算はどれくらい？</p>
+                    <select name="cost" >
+                        <option value="2000~5000"
+                        <?php if (isset($cost)) { ?>
+                            <?php if ($cost == '2000~5000') { ?>
+                                selected
                             <?php }?>
-                            >5000~7000</option>
-                            <option value="7000~"
-                            <?php if (isset($cost)) { ?>
-                                <?php if ($cost == '7000~') { ?>
-                                    selected
-                                <?php }?>
+                        <?php }?>>2000~5000</option>
+                        <option value="5000~7000"
+                        <?php if (isset($cost)) { ?>
+                            <?php if ($cost == '5000~7000') { ?>
+                                selected
                             <?php }?>
-                            > 7000~</option>
-                        </select>
-                        <button type="submit">更新!</button>
-                        <form action="./" method="get">
-                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
-                        </form>
+                        <?php }?>
+                        >5000~7000</option>
+                        <option value="7000~"
+                        <?php if (isset($cost)) { ?>
+                            <?php if ($cost == '7000~') { ?>
+                                selected
+                            <?php }?>
+                        <?php }?>
+                        > 7000~</option>
+                    </select>
+                    <button type="submit">更新!</button>
+                    <form action="./" method="get">
+                        <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
                     </form>
-                    <form action="../../food/delete.php" name="delete" method="post">
-                        <button type="submit">削除</button>
-                        <form action="./" method="get">
-                            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
-                        </form>
+                </form>
+                <form action="../../food/delete.php" name="delete" method="post">
+                    <button type="submit">削除</button>
+                    <form action="./" method="get">
+                        <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
                     </form>
-                </div>
+                </form>
             </div>
          <?php } ?>
     </body>
