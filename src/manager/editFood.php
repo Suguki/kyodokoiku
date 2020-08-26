@@ -1,5 +1,6 @@
 <?php
 require_once '../Model/FoodsModel.php';
+session_start();
 
 $place = $_POST['place'];
 $distance = $_POST['distance'];

@@ -21,6 +21,9 @@
                     <a class="dropdown-item" href="/cafe/edit.php">カフェ</a>
                   </div>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../manager/signUpContents.php">追加</a>
+                </li>
               <?php endif; ?>
             <?php endif; ?>
           </ul>

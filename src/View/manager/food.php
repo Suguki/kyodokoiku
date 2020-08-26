@@ -18,13 +18,15 @@
             <div class="alert alert-success text-center">
                 <?php echo $resultMessage?>
             </div>
+            <a href="../../Top/top.php" class="btn btn-success position">戻る</a>
+            <a href="../../manager/signUpContents.php" class="btn btn-primary position">続けて追加</a>
         <?php } else {?>
             <?php if (isset($errorMessage)) { ?>
                 <div class="alert alert-danger text-center">
                     <?php echo $errorMessage?>
                 </div>
+                <a href="../../manager/signUpContents.php" class="btn btn-success position">戻る</a>
             <?php } ?>
         <?php } ?>
-        <a href="../manager/index.php" class="btn btn-success position">戻る</a>
     </body>
 </html>

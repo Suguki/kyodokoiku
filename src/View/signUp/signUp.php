@@ -14,13 +14,13 @@
           <?php include( $_SERVER['DOCUMENT_ROOT'] . '/View/globalNav.php'); ?>
         </div>
         <?php if (isset($resultMessage)) { ?>
-            <h1><?php echo $resultMessage?></h1>
             <?php include('../manager/index.php') ?>
+            <a class="btn btn-success" href="../../Top/top.php">戻る</a>
         <?php } else {?>
             <?php if (isset($errorMessage)) { ?>
-                <h1><?php echo $errorMessage?></h1>
+                <div class="alert alert-danger text-center"><?php echo $errorMessage?></div>
+                <a class="btn btn-success" href="../../logIn/index.php">戻る</a>
             <?php } ?>
         <?php } ?>
-        <a class="btn btn-success" href="../../Top/top.php">戻る</a>
     </body>
 </html>
