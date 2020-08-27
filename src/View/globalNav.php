@@ -27,10 +27,6 @@
               <?php endif; ?>
             <?php endif; ?>
           </ul>
-          <form action="" method="post" class="form-inline my-2 my-lg-0 text-right">
-            <input class="form-control mr-sm-2" type="search" placeholder="検索" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">フリーワードで検索</button>
-          </form>
         </div>
     </nav>
 </div>
